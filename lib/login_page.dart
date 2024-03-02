@@ -6,7 +6,9 @@ final TextEditingController emailController = TextEditingController();
 final TextEditingController passwordController = TextEditingController();
 
 bool validateLogin(String email, String password) {
-  if (email == 'admin' && password == 'adminpassword') {
+  if (email != null && password!=null) {
+    print("Email:$email");
+    print("Password:$password");
     return true;
   }
   return false;
